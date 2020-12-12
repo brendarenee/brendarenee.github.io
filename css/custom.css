@@ -1,0 +1,105 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+  background:
+    linear-gradient(rgba(160, 185, 165), transparent 90%),
+    url('../images/forest-fog.jpg') no-repeat center center fixed;
+}
+
+
+h1 {
+  font-family: 'Megrim', cursive;
+  font-size: 90px;
+  color: #375b5d;
+}
+
+
+/* Header */
+
+div.header {
+  height: 100vh;
+  font-weight: 600;
+  background: none;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.jumbotron .btn {
+  background-color: #4e4656;
+  color: lightgrey;
+}
+
+.btn-1 {
+  background-color: #5C8C81;
+}
+
+.btn-2 {
+  background-color: #A1A96A;
+}
+
+.btn-3 {
+  background-color: #EFD061;
+}
+
+/* Portfolio Styles */
+
+div .list-group-horizontal {
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.list-group-item {
+  background: none;
+  border: none;
+}
+
+.card-img-overlay {
+  font-weight: bold;
+}
+
+.card .card-title {
+  background-color: black;
+  color: white;
+  height: 45px;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.card .card-text {
+  display: none;
+  flex-grow: 2;
+  background-color: rgba(255, 255, 255, .8);
+  transition: 1s;
+}
+
+.card:hover .card-text {
+  display: block;
+}
+
+
+.section {
+  width: 100%;
+  height: 100%;
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 768px) {
+  .header h1 {
+    font-size: 130px;
+  }
+  .section {
+    height: 100vh;
+  }
+
+}
+@media (min-width: 1200px) {
+  .list-group-horizontal,
+  .portfolio-cards {
+    max-width: 1350px;
+
+  }
+
+}
