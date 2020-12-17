@@ -8,25 +8,27 @@
     <link rel="stylesheet" href="css/custom.css">
     <title>Brenda Butler</title>
   </head>
-  <body>
 
-    <!-- navigation -->
-    <nav data-spy="scroll" class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
-      <!-- <a class="navbar-brand order-1" href="#contact">Brenda Butler</a> -->
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-          <a class="nav-link" href="#about">About</a>
-          <a class="nav-link" href="#skills">Skills</a>
-          <a class="nav-link" href="#work">Work</a>
-          <a class="nav-link" href="#resume">Resume</a>
-          <a class="nav-link" href="#contact">Contact</a>
-        </div>
+  <!-- navigation -->
+
+  <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+    <!-- <a class="navbar-brand order-1" href="#contact">Brenda Butler</a> -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" href="#home">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#skills">Skills</a>
+        <a class="nav-link" href="#work">Work</a>
+        <a class="nav-link" href="#resume">Resume</a>
+        <a class="nav-link" href="#contact">Contact</a>
       </div>
-    </nav> <!-- /navigation -->
+    </div>
+  </nav> <!-- /navigation -->
+
+  <body id="home" data-spy="scroll" data-target=".navbar" data-offset="150">
 
     <!-- jumbotron/about -->
     <div class="d-flex header mb-0">
@@ -34,26 +36,9 @@
       <p class="lead text-center">Creating modern, effective websites for your growing business.</p>
     </div> <!-- /jumbotron/about -->
 
-      <!-- skills
-      <div class="section container-fluid py-4 py-md-5">
-        <h2 id="skills" class="display-4 pb-md-4">Skills</h2>
-        <div class="container">
-          <div class="row">
-            <button type="button" class="btn btn-1 btn-lg m-3 col-sm-auto">Javascript</button>
-            <button type="button" class="btn btn-2 btn-lg m-3 col-sm-auto">jQuery</button>
-            <button type="button" class="btn btn-3 btn-lg m-3 col-sm-auto">Bootstrap</button>
-          </div>
-          <div class="row">
-            <button type="button" class="btn btn-1 btn-lg m-3 col-sm-auto">CSS</button>
-            <button type="button" class="btn btn-2 btn-lg m-3 col-sm-auto">Sass</button>
-            <button type="button" class="btn btn-3 btn-lg m-3 col-sm-auto">HTML</button>
-            <button type="button" class="btn btn-1 btn-lg m-3 col-sm-auto">Git</button>
-          </div>
-        </div>
-      </div>  skills -->
 
       <!-- work -->
-      <div class="section container-fluid py-4 py-md-5">
+      <div class="section section-work container-fluid py-4 py-md-5">
         <h2 id="work" class="display-4 pb-md-4">Portfolio</h2>
 
         <div class="skills-list list-group list-group-horizontal mb-5 sticky-top mt-auto">
@@ -68,63 +53,75 @@
         <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4 portfolio-cards mx-auto">
 
           <div class="col mb-4">
-            <div class="card bg-light mx-auto" style="width: 18rem;">
-              <img src="images/proj-slideshow.png" class="card-img" alt="Photo Gallery Watermark">
-              <div class="d-flex flex-column-reverse justify-content-between card-img-overlay p-0">
-                <h5 class="card-title mb-0 p">Photo Gallery</h5>
-                <p class="card-text p-3">A photo gallery I built, that utilizes a search/filter function and a display overlay.</p>
-              </div>
+            <div class="card mx-auto" style="width:300px;">
+                <div class="flip-card">
+                  <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                      <img src="images/proj-slideshow.png" alt="Photo Gallery Watermark" style="width:300px;height:300px">
+                    </div>
+                    <div class="flip-card-back">
+                      <p class="card-text p-3">This photo gallery features a grid format with the ability to filter using a <b>
+                        live search</b> bar. It also features a modal overlay utilizing a jQuery plugin.</p>
+                    </div>
+                  </div>
+                </div>
+              <footer>Photo Gallery</footer>
             </div>
           </div>
 
           <div class="col mb-4">
-            <div class="card bg-light mx-auto" style="width: 18rem;">
-              <img src="images/proj-gameapp.png" class="card-img" alt="Game App Watermark">
-              <div class="d-flex flex-column-reverse justify-content-between card-img-overlay p-0">
-                <h5 class="card-title mb-0">Game App</h5>
-                <p class="card-text p-3">A simple game that generates a random phrase, utilizes an onscreen keyboard, and tallies incorrect guesses with the heart counter.</p>
-              </div>
+            <div class="card mx-auto" style="width:300px;">
+                <div class="flip-card">
+                  <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                      <img src="images/proj-gameapp.png" alt="Game App Watermark" style="width:300px;height:300px">
+                    </div>
+                    <div class="flip-card-back">
+                      <p class="card-text p-3">A simple game that generates a random phrase, utilizes an onscreen keyboard, and tallies incorrect guesses with the heart counter.</p>
+                    </div>
+                  </div>
+                </div>
+              <footer>Game App</footer>
             </div>
           </div>
 
           <div class="col mb-4">
-            <div class="card bg-light mx-auto" style="width: 18rem;">
-              <img src="images/proj-dashboard.png" class="card-img" alt="Dashboard Watermark">
-              <div class="d-flex flex-column-reverse justify-content-between card-img-overlay p-0">
-                <h5 class="card-title mb-0 pt-">Dashboard</h5>
-                <p class="card-text p-3">An app dashboard utilizing various graph metrics, 'send message to user' functionality, and social media updates.</p>
-              </div>
+            <div class="card mx-auto" style="width:300px;">
+                <div class="flip-card">
+                  <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                      <img src="images/proj-dashboard.png" alt="Dashboard Watermark" style="width:300px;height:300px">
+                    </div>
+                    <div class="flip-card-back">
+                      <p class="card-text p-3">An app dashboard utilizing various graph metrics, 'send message to user' functionality, and social media updates.</p>
+                    </div>
+                  </div>
+                </div>
+              <footer>Dashboard</footer>
             </div>
           </div>
 
           <div class="col mb-4">
-            <div class="card bg-light mx-auto" style="width: 18rem;">
-              <img src="images/proj-directory.png" class="card-img" alt="...">
-              <div class="d-flex flex-column-reverse justify-content-between card-img-overlay p-0">
-                <h5 class="card-title mb-0">Employee Directory</h5>
-                <p class="card-text p-3">An employee directory page gathering data from an API, with modal functionality for a look at detailed employee data. </p>
-              </div>
+            <div class="card mx-auto" style="width:300px;">
+                <div class="flip-card">
+                  <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                      <img src="images/proj-directory.png" alt="Directory Watermark" style="width:300px;height:300px">
+                    </div>
+                    <div class="flip-card-back">
+                      <p class="card-text p-3">An employee directory page gathering data from an API, with modal functionality for a look at detailed employee data.</p>
+                    </div>
+                  </div>
+                </div>
+              <footer>Employee Directory</footer>
             </div>
           </div>
 
       </div>
     </div>
-
-
-
-    <hr class="my-4">
-    <p>I am a web developer assisting small businesses and non-profits in establishing modern, easy-to-navigate websites designed to establish an effective online presence with an accessible user interface. // I am a front-end web developer with a passion for working with small businesses and non-profits to enhance visibility and facilitate relationships within the community. </p>
-    <div class="collapse" id="bio-more">
-      <div class="bio-body">
-        <p>Some would call this a mid-career change and they would be right.</p>
-        <p>After 10 years of working in social services and foster care, I realized my strengths were better suited and my investigative mind more engaged in web development. In 2018, I began focusing full-time on my education at Team Treehouse, while also taking classes at the local community college to supplement my education. </p>
-        <p>In pursuit of making the most of this bananas year that has been 2020, I've completed my Front-End Web Development program through Team Treehouse, while relocating to Bend, OR with my family. Here I hope to continue my education, while helping local businesses create an engaging online presence. </p>
-      </div>
-    </div>
-    <a class="btn btn-sm" data-toggle="collapse" href="#bio-more" role="button" aria-expanded="false" aria-controls="collapseExample">Read more...</a>
 
       <!-- resume -->
-      <div class="section container-fluid py-4 py-md-5">
+      <div class="section section-resume container-fluid py-4 py-md-5">
         <h2 id="resume" class="display-4 pb-md-4">Resume</h2>
         <div class="container">
           <div class="list-group">
@@ -157,11 +154,22 @@
       </div><!-- resume -->
 
       <!-- contact -->
-      <div class="section container-fluid py-4 py-md-5">
+      <div class="section section-contact container-fluid py-4 py-md-5">
         <h2 id="contact" class="display-4 pb-md-4">Contact</h2>
         <div class="">
           <h4>Brenda Butler</h4>
-          <p>Bend, OR</p>
+          <hr class="my-4">
+          <p>I am a web developer assisting small businesses and non-profits in establishing modern, easy-to-navigate websites designed to establish an effective online presence with an accessible user interface. // I am a front-end web developer with a passion for working with small businesses and non-profits to enhance visibility and facilitate relationships within the community. </p>
+          <div class="collapse" id="bio-more">
+            <div class="bio-body">
+              <p>Some would call this a mid-career change and they would be right.</p>
+              <p>After 10 years of working in social services and foster care, I realized my strengths were better suited and my investigative mind more engaged in web development. In 2018, I began focusing full-time on my education at Team Treehouse, while also taking classes at the local community college to supplement my education. </p>
+              <p>In pursuit of making the most of this bananas year that has been 2020, I've completed my Front-End Web Development program through Team Treehouse, while relocating to Bend, OR with my family. Here I hope to continue my education, while helping local businesses create an engaging online presence. </p>
+            </div>
+          </div>
+          <p>The best way to reach me is by email. But please feel free to peruse my professional profile on LinkedIn and Github. Links below:</p>
+          <a class="btn btn-sm" data-toggle="collapse" href="#bio-more" role="button" aria-expanded="false" aria-controls="collapseExample">Read more...</a>
+
           <p>brenda.r.butler@gmail.com</p>
         </div>
       </div><!-- contact -->

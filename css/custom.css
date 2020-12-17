@@ -1,18 +1,18 @@
 body {
+  margin-top: 56px;
   font-family: 'Montserrat', sans-serif;
   position: relative;
   background:
-    linear-gradient(rgba(160, 185, 165), transparent 90%),
+    /* linear-gradient(rgb(160, 185, 165), transparent 24.99%, rgb(141,149,161) 25%, transparent 49.99%, rgb(245,215,212) 50%, transparent 74.99%, rgb(245,232,212) 75%, transparent 99.99%), */
     url('../images/forest-fog.jpg') no-repeat center center fixed;
+    clear: both;
 }
-
 
 h1 {
   font-family: 'Megrim', cursive;
   font-size: 90px;
-  color: #375b5d;
+  color: rgb(55,91,93);
 }
-
 
 /* Header */
 
@@ -22,44 +22,49 @@ div.header {
   background: none;
   flex-direction: column;
   justify-content: center;
-}
-
-
-.jumbotron .btn {
-  background-color: #4e4656;
-  color: lightgrey;
-}
-
-.btn-1 {
-  background-color: #5C8C81;
-}
-
-.btn-2 {
-  background-color: #A1A96A;
-}
-
-.btn-3 {
-  background-color: #EFD061;
+  background: linear-gradient(rgb(160, 185, 165), transparent 90%);
 }
 
 /* Portfolio Styles */
 
+.section-work {
+  background: linear-gradient(rgb(141,149,161) 25%, transparent 90%)
+}
+
 div .list-group-horizontal {
-  width: 100%;
+  width: 105%;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  top: 56px;
+}
+
+.list-group-item:first-child {
+  border-radius: 0;
+}
+
+.list-group-item:last-child {
+  border-radius: 0;
 }
 
 .list-group-item {
-  background: none;
+  flex-grow: 1;
   border: none;
+  border-radius: 10px;
+  background: rgb(52, 58, 64);
+  color: rgba(255,255,255,.5);
 }
 
-.card-img-overlay {
-  font-weight: bold;
+/* CARD STYLES */
+
+.portfolio-cards .col {
+  background: none;
 }
 
-.card .card-title {
+.card {
+  background: transparent;
+}
+
+.card footer {
   background-color: black;
   color: white;
   height: 45px;
@@ -67,21 +72,65 @@ div .list-group-horizontal {
   padding-top: 10px;
 }
 
-.card .card-text {
-  display: none;
-  flex-grow: 2;
-  background-color: rgba(255, 255, 255, .8);
-  transition: 1s;
+/* FLIP CARD */
+.flip-card {
+  background: transparent;
+
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
 }
 
-.card:hover .card-text {
-  display: block;
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
 }
 
+.card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background: lightgrey;
+  color: black;
+}
+
+.flip-card-back {
+  background: white;
+  color: rgb(55,91,93);
+  transform: rotateY(180deg);
+}
+
+/* GENERAL FORMATTING */
+
+/* Resume */
+
+.section-resume {
+  background: linear-gradient(rgb(245,215,212), transparent 90%);
+}
+
+/* Contact Section */
+
+.section-contact {
+  background: linear-gradient(rgb(245,232,212), transparent 90%)
+}
 
 .section {
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
+  max-height: fit-content;
 }
 
 /* MEDIA QUERIES */
@@ -90,10 +139,6 @@ div .list-group-horizontal {
   .header h1 {
     font-size: 130px;
   }
-  .section {
-    height: 100vh;
-  }
-
 }
 @media (min-width: 1200px) {
   .list-group-horizontal,
