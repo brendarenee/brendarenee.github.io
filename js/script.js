@@ -13,64 +13,22 @@ function findCard(e) {
   }
 }
 
-// $('.card').hover(
-//   (e) => {
-//     findCard(e);
-//     $(card).find('p').show();
-//
-//     const project = $(card).find('h5').text();
-//
-//     switch (project) {
-//       case 'Photo Gallery':
-//         $('.pg').css({
-//           'transform' : 'scale(1.2)',
-//           'font-weight' : '600'});
-//         break;
-//       case 'Game App':
-//         $('.ga').css({
-//           'transform' : 'scale(1.2)',
-//           'font-weight' : '600'});
-//         break;
-//       case 'Dashboard':
-//         $('.db').css({
-//           'transform' : 'scale(1.2)',
-//           'font-weight' : '600'});
-//         break;
-//       case 'Employee Directory':
-//         $('.ed').css({
-//           'transform' : 'scale(1.2)',
-//           'font-weight' : '600'});
-//         break;
-//     }
-//
-//   },
-//   (e) => {
-//     findCard(e);
-//     $(card).find('p').hide();
-//
-//     const project = $(card).find('h5').text();
-//
-//     switch (project) {
-//       case 'Photo Gallery':
-//         $('.pg').css({
-//           'transform' : 'scale(1)',
-//           'font-weight:' : '300'});
-//         break;
-//       case 'Game App':
-//         $('.ga').css({
-//           'transform' : 'scale(1.2)',
-//           'font-weight' : '600'});
-//         break;
-//       case 'Dashboard':
-//         $('.db').css({
-//           'transform' : 'scale(1.2)',
-//           'font-weight' : '600'});
-//         break;
-//       case 'Employee Directory':
-//         $('.ed').css({
-//           'transform' : 'scale(1.2)',
-//           'font-weight' : '600'});
-//         break;
-//     }
-//   }
-// )
+const projects = document.querySelectorAll('.project-about');
+
+let portfolioDiv = document.querySelector('.portfolio-cards');
+let portfolioContent = '';
+
+console.log(projects);
+
+function loadProjects () {
+  projects.forEach( project => {
+    let id = project.getAttribute('id');
+    let description = project.textContent;
+    let title = id.split('-').join(' ').toUpperCase();
+    portfolioContent +=
+      `<div class="col mb-4"><div class="card mx-auto" style="width:300px;"><div class="flip-card"><div class="flip-card-inner text-center"><div class="flip-card-front" style="background:url('images/projects/${id}.png')"><h5 class="card-title">${title}</h5></div><div class="flip-card-back"><p class="card-text p-3">${description}</p></div></div></div></div></div>`;
+  });
+};
+
+loadProjects();
+portfolioDiv.innerHTML = portfolioContent;
