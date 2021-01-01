@@ -2,25 +2,26 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="scss/custom.scss">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Lato&family=Montserrat:wght@300;400;600&family=Megrim&family=Raleway&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/custom.css">
     <title>Brenda Butler</title>
   </head>
 
-  <body id="home" data-spy="scroll" data-target=".navbar" data-offset="150">
+  <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="250">
 
     <!-- navigation -->
 
     <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
       <!-- <a class="navbar-brand order-1" href="#contact">Brenda Butler</a> -->
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <div class="navbar-nav">
-          <a class="nav-link active" href="#home">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link active" aria-current="page" href="#home">Home</a>
           <a class="nav-link" href="#about">About</a>
           <a class="nav-link" href="#work">Work</a>
           <a class="nav-link" href="#resume">Resume</a>
@@ -30,7 +31,7 @@
     </nav> <!-- /navigation -->
 
     <!-- header -->
-    <div class="d-flex header mb-0 px-3">
+    <div id="home" class="d-flex header mb-0 px-3">
       <h1 class="text-center">Brenda Butler</h1>
       <hr>
       <p class="lead text-center">Creating modern, effective websites for your growing business.</p>
@@ -39,8 +40,8 @@
 
     <!-- about -->
     <div class="section section-about container-fluid px-0 mb-4">
-      <h2 id="about" class="header-section sticky-top display-1 py-3 mb-4 text-center">About</h2>
-      <div class="container-contact p-4 mx-4">
+      <h2 class="header-section display-1 py-3 mb-4 text-center">About</h2>
+      <div id="about" class="container-about p-4 mx-4 mx-md-auto">
         <h4 class="text-center">Brenda Butler</h4>
         <hr class="my-4">
         <p>I am a front-end web developer with a passion for working with small businesses and non-profits to establish modern, easy-to-navigate websites. I strive to enhance visibility, accessibility, and facilitate relationships within the community. I would love to collaborate with you!</p>
@@ -49,7 +50,7 @@
             <h5>Background</h5>
             <p>In 2007, I graduated from Humboldt State University with a degree in Sociology and a minor in Spanish. For the next ten years I worked in the social services field, first working with foster youth and then working with the SNAP (formerly Food Stamps) program determining elibility. I loved the work I did, but I knew I wanted to take the leap to web development, even if I had to work my way all the way up. In 2018, I began focusing full-time on my education at Team Treehouse, while also taking community college classes to supplement my education. </p>
             <p>And then my life took some detours -- I became a full-time mom and also took part-time work as a Library Assistant. But in pursuit of making the most of this bananas year that has been 2020, I've completed my Front-End Web Development program through Team Treehouse, while relocating to Bend, OR this fall with my family. My web development education continues, but I am excited to start working with you!</p>
-            <h5>Other Stuff</h5>
+            <h5>Interests</h5>
             <p>In my spare time you can find me doing other things: </p>
             <ul>
               <li><b>Crafting</b> - making lotions and potions and other crafty stuff for myself and friends and family </li>
@@ -73,11 +74,11 @@
 
       <!-- work -->
       <div class="section section-work container-fluid px-0">
-        <div class="header-section sticky-top mb-5">
-          <h2 id="work" class="header-section sticky-top display-1 py-3 mb-4 text-center">Work</h2>
+        <div class="header-section mb-5">
+          <h2 class="header-section display-1 py-3 mb-4 text-center">Work</h2>
         </div>
 
-        <div class="skills-list list-group list-group-horizontal m-5 pt-5">
+        <div id="work" class="skills-list list-group list-group-horizontal m-5 pt-5">
           <div class="background-label text-center">
             skills
           </div>
@@ -114,8 +115,8 @@
       <!-- resume -->
 
       <div class="section section-resume container-fluid px-0 pb-4">
-        <h2 id="resume" class="header-section sticky-top display-1 py-3 mb-4 text-center">Experience</h2>
-        <div class="container mt-5">
+        <h2 class="header-section display-1 py-3 mb-4 text-center">Experience</h2>
+        <div id="resume" class="container mt-5">
 
           <ul class="list-group mx-auto d-flex align-items-center">
 
@@ -150,13 +151,14 @@
 
       <!-- contact -->
       <div class="section section-contact container-fluid px-0">
-        <h2 id="contact" class="header-section display-1 py-3 mb-4 text-center">Contact</h2>
-        <div class="container-contact p-4 mx-4">
+        <h2 class="header-section display-1 py-3 mb-4 text-center">Contact</h2>
+        <div id="contact" class="container-contact p-4 mx-4 mx-md-auto">
           <h4 class="text-center">Let's collaborate!</h4>
           <hr class="my-4">
 
           <div class="text-center">
-            <p class="pt-2"><b>email me:</b> brenda.r.butler@gmail.com</p>
+            <p class="pt-2"><b>email me:</b></p>
+            <p>brenda.r.butler@gmail.com</p>
             <p class="pt-2">or <b>connect</b> with me here:</p>
               <?xml version="1.0" encoding="utf-8"?>
               <!-- Generate more at customizr.net -->
@@ -178,6 +180,7 @@
 
     </div>
   </body>
+  <script type="module" src="module.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>

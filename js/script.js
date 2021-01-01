@@ -1,3 +1,5 @@
+
+
 const skills = $('.skills-list').children();
 let card;
 // Locate the .card element for the event

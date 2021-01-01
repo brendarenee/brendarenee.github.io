@@ -1,3 +1,5 @@
+/* General Formatting */
+
 body {
   width: 100%;
   font-family: 'Raleway', sans-serif;
@@ -5,14 +7,30 @@ body {
   background: url('../images/forest-fog.jpg') no-repeat center center fixed;
 }
 
-.navbar {
-
-}
-
 h1 {
   font-family: 'Megrim', cursive;
   font-size: 90px;
   color: rgb(55,91,93);
+}
+
+.header-section {
+  top: 56px;
+  background-color: rgb(52, 58, 64);
+  color: white;
+}
+
+.section {
+  width: 100%;
+  min-height: 100vh;
+  max-height: fit-content;
+}
+
+div h2 {
+  font-family: 'Megrim', cursive;
+}
+
+nav.sticky-top {
+  z-index: 2000;
 }
 
 /* Header */
@@ -39,25 +57,12 @@ div.header {
 
 }
 
-/* General Formatting */
-
-.header-section {
-  top: 56px;
-  background-color: rgb(52, 58, 64);
-  color: white;
-}
-
-.section {
-  width: 100%;
-  min-height: 100vh;
-  max-height: fit-content;
-}
-
-div h2 {
-  font-family: 'Megrim', cursive;
-}
-
 /* About Section Styles */
+
+.container-about {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+}
 
 .buttons-about a {
   color: white;
@@ -70,7 +75,9 @@ div h2 {
   text-decoration: underline;
 }
 
-/* Portfolio Styles */
+
+
+/* Portfolio Section Styles */
 
 .hidden {
   display: none;
@@ -238,6 +245,11 @@ li.list-group-item {
     font-size: 60px;
   }
 
+  .container-about,
+  .container-contact {
+    width: 80%;
+  }
+
   .portfolio-container > .background-label {
     /* writing-mode: vertical-rl;
     text-orientation: upright; */
@@ -246,11 +258,16 @@ li.list-group-item {
   }
 
 }
+
+@media (min-width: 992px) {
+  .container-contact {
+    width: 50%;
+  }
+}
+
 @media (min-width: 1200px) {
   .list-group-horizontal,
   .portfolio-cards {
     max-width: 1350px;
-
   }
-
 }
