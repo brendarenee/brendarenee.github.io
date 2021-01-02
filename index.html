@@ -2,15 +2,13 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <link rel="stylesheet" href="scss/custom.scss">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Lato&family=Montserrat:wght@300;400;600&family=Megrim&family=Raleway&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/master.css">
     <title>Brenda Butler</title>
   </head>
 
-  <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="250">
+  <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="250" class="position-relative w-100">
 
     <!-- navigation -->
 
@@ -31,16 +29,16 @@
     </nav> <!-- /navigation -->
 
     <!-- header -->
-    <div id="home" class="d-flex header mb-0 px-3">
+    <div id="home" class="header bg-transparent d-flex flex-column vh-100 mb-0 px-3">
       <h1 class="text-center">Brenda Butler</h1>
       <hr>
-      <p class="lead text-center">Creating modern, effective websites for your growing business.</p>
+      <p class="lead text-center fst-italic text-light">Creating modern, effective websites for your growing business.</p>
     </div> <!-- /header -->
 
 
     <!-- about -->
-    <div class="section section-about container-fluid px-0 mb-4">
-      <h2 class="header-section display-1 py-3 mb-4 text-center">About</h2>
+    <div class="section section-about container-fluid w-100 min-vh-100 px-0 mb-4">
+      <h2 class="header-section display-1 py-3 mb-4 text-center bg-dark text-light">About</h2>
       <div id="about" class="container-about p-4 mx-4 mx-md-auto">
         <h4 class="text-center">Brenda Butler</h4>
         <hr class="my-4">
@@ -63,8 +61,8 @@
           </div>
         </div>
         <div class="buttons-about d-grid gap-3 col-8 col-md-4 mx-auto">
-          <a class="btn btn-primary" data-bs-toggle="collapse" href="#bio-more" role="button" aria-expanded="false" aria-controls="collapseExample">Read more about me...</a>
-          <a class="btn btn-primary" href="#contact">Contact</a>
+          <a class="btn btn-primary bg-dark text-light" data-bs-toggle="collapse" href="#bio-more" role="button" aria-expanded="false" aria-controls="collapseExample">Read more about me...</a>
+          <a class="btn btn-primary bg-dark text-light" href="#contact">Contact</a>
         </div>
 
           </div>
@@ -73,12 +71,12 @@
 
 
       <!-- work -->
-      <div class="section section-work container-fluid px-0">
+      <div class="section section-work container-fluid w-100 min-vh-100 px-0">
         <div class="header-section mb-5">
-          <h2 class="header-section display-1 py-3 mb-4 text-center">Work</h2>
+          <h2 class="header-section display-1 py-3 mb-4 text-center bg-dark text-light">Work</h2>
         </div>
 
-        <div id="work" class="skills-list list-group list-group-horizontal m-5 pt-5">
+        <div id="work" class="skills-list list-group list-group-horizontal flex-wrap justify-content-evenly position-relative m-5 pt-5">
           <div class="background-label text-center">
             skills
           </div>
@@ -98,9 +96,9 @@
           <p id="dashboard" class="project-about">An app dashboard utilizing various graph metrics, 'send message to user' functionality, and social media updates.</p>
           <p id="employee-directory" class="project-about">An employee directory page gathering data from an API, with modal functionality for a look at detailed employee data.</p>
         </div>
-        <div class="portfolio-container">
+        <div class="portfolio-container position-relative">
 
-          <div class="background-label text-center">
+          <div class="background-label text-center position-absolute">
             projects
           </div>
 
@@ -114,8 +112,8 @@
 
       <!-- resume -->
 
-      <div class="section section-resume container-fluid px-0 pb-4">
-        <h2 class="header-section display-1 py-3 mb-4 text-center">Experience</h2>
+      <div class="section section-resume container-fluid w-100 min-vh-100 px-0 pb-4">
+        <h2 class="header-section display-1 py-3 mb-4 text-center bg-dark text-light">Experience</h2>
         <div id="resume" class="container mt-5">
 
           <ul class="list-group mx-auto d-flex align-items-center">
@@ -150,8 +148,8 @@
         </div><!-- resume -->
 
       <!-- contact -->
-      <div class="section section-contact container-fluid px-0">
-        <h2 class="header-section display-1 py-3 mb-4 text-center">Contact</h2>
+      <div class="section section-contact container-fluid w-100 min-vh-100 px-0">
+        <h2 class="header-section display-1 py-3 mb-4 text-center bg-dark text-light">Contact</h2>
         <div id="contact" class="container-contact p-4 mx-4 mx-md-auto">
           <h4 class="text-center">Let's collaborate!</h4>
           <hr class="my-4">
