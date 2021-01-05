@@ -1,21 +1,25 @@
-// Custom.scss
-// Option B: Include parts of Bootstrap
-
 // Custom Files
 @import "utilities/variables";
 
 // Required
-@import "../bootstrap/scss/bootstrap";
-@import "../bootstrap/scss/functions";
-@import "../bootstrap/scss/variables";
-@import "../bootstrap/scss/mixins";
+@import "../bootstrap-5.0.0-beta1/scss/bootstrap";
+@import "../bootstrap-5.0.0-beta1/scss/functions";
+@import "../bootstrap-5.0.0-beta1/scss/variables";
+@import "../bootstrap-5.0.0-beta1/scss/mixins";
+
 
 // Optional
-@import "../bootstrap/scss/root";
-@import "../bootstrap/scss/reboot";
-@import "../bootstrap/scss/type";
-@import "../bootstrap/scss/images";
-@import "../bootstrap/scss/grid";
+@import "../bootstrap-5.0.0-beta1/scss/containers";
+@import "../bootstrap-5.0.0-beta1/scss/root";
+@import "../bootstrap-5.0.0-beta1/scss/reboot";
+@import "../bootstrap-5.0.0-beta1/scss/type";
+@import "../bootstrap-5.0.0-beta1/scss/card";
+@import "../bootstrap-5.0.0-beta1/scss/grid";
+@import "../bootstrap-5.0.0-beta1/scss/list-group";
+
+// Map Updates
+
+// map.set($spacers, "6", ($spacer * 10));
 
 /* General Formatting */
 
@@ -25,19 +29,18 @@ body {
 
 h1 {
   font-family: $font-family-display;
-  color: rgb(55,91,93); /* dark green */
+  font-size: 7rem;
 }
 
 .header-section {
   top: 56px;
-  // background-color: rgb(52, 58, 64) charcoal */
 }
 
 .section {
   max-height: fit-content;
 }
 
-div h2 {
+h2.header-section {
   font-family: $font-family-display;
 }
 
@@ -48,97 +51,45 @@ div.header {
   background: linear-gradient(rgb(160, 185, 165), transparent 90%);
 }
 
-.header hr {
-  border-top: 5px solid rgb(55,91,93);
-  border-bottom: 2px solid white;
-}
-
-.header p {
+.header h5 {
   font-family: $font-family-subheading;
-  text-shadow: 1px 1px 3px rgb(52, 58, 64);
+  text-shadow: 1px 1px 3px $dark;
 
 }
+
 
 /* About Section Styles */
 
 .container-about {
-  background-color: rgba(255, 255, 255, 0.7);
-  border-radius: 10px;
+  background-color: $light-transparent;
 }
-
-.bio-body h5 {
-  text-align: center;
-  text-decoration: underline;
-}
-
 
 
 /* Portfolio Section Styles */
 
-.hidden {
-  display: none;
-}
-
-hr {
-  border-top: white solid 2px;
-}
 
 .section-work {
   background: linear-gradient(rgba(114, 160, 193, 0.85), transparent 90%);
 }
 
-.background-label {
-  left: 0;
-  right: 0;
-  top: -45px;
+.background-label {;
+  top: -15px;
   z-index: -1;
   overflow: hidden;
-  font-size: 70px;
   letter-spacing: 13px;
 }
 
-.portfolio-container > .background-label {
-  top: -50px;
-}
-
 .list-group-item {
-  border: none;
-  border-radius: 10px;
-  background: rgb(52, 58, 64);
-  box-shadow: 1px 1px 4px rgb(52, 58, 64);
-  color: white;
-  margin-bottom: 10px;
+  box-shadow: 1px 1px 4px $dark;
 }
 
-button.list-group-item {
-  border-radius: 10px;
-}
-
-
-
-/* CARD STYLES */
-
-.portfolio-cards .col {
-  background: none;
-}
-
-.card {
-  background: transparent;
-  border: none;
-}
 
 /* FLIP CARD */
 .flip-card {
-  background: transparent;
-  width: 300px;
-  height: 300px;
   perspective: 1000px;
 }
 
 .flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
   transition: transform 0.8s;
   transform-style: preserve-3d;
 }
@@ -149,30 +100,15 @@ button.list-group-item {
 
 .flip-card-front, .flip-card-back {
   border-radius: 15px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: absolute;
-  width: 100%;
-  height: 100%;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
-.flip-card-front {
-  color: black;
-}
-
 .card-title {
-  font-size: 40px;
-  text-shadow: 1px 1px 3px darkgrey;
-  /* background-color: rgb(55,91,93); */
-  padding: 20px 0;
+  text-shadow: 1px 1px 3px $dark;
 }
 
 .flip-card-back {
-  background: white;
-  color: rgb(55,91,93);
   transform: rotateY(180deg);
 }
 
@@ -183,22 +119,18 @@ button.list-group-item {
 }
 
 li.list-group-item {
-  background-color: rgba(255, 255, 255, 0.7);
-  color: black;
-  width: 300px;
+  background-color: $light-transparent;
+  width: 75%;
 }
 
 /* Contact Section */
 
 .section-contact {
-  /* background: linear-gradient(rgb(245,232,212), transparent 90%); */
   background: linear-gradient(rgb(52, 58, 64), transparent 90%);
-
 }
 
 .container-contact {
-  background-color: rgba(255, 255, 255, 0.7);
-  border-radius: 10px;
+  background-color: $light-transparent;
 }
 
 .custom-icon {
@@ -207,50 +139,39 @@ li.list-group-item {
 }
 /* MEDIA QUERIES */
 
-@media (min-width: 768px) {
+@include media-breakpoint-up(md) {
 
   div.header {
     padding-top: 20%;
   }
 
-  .header h1 {
-    font-size: 130px;
-  }
-
-  .header p {
-    font-size: 30px;
-  }
-
-  .header-section h2 {
-
-  }
   .background-label {
     top: -40px;
     letter-spacing: 50px;
-    font-size: 60px;
   }
 
-  .container-about,
-  .container-contact {
+  .container-about {
     width: 80%;
   }
 
   .portfolio-container > .background-label {
-    /* writing-mode: vertical-rl;
-    text-orientation: upright; */
     top: -45px;
     letter-spacing: 30px;
   }
 
-}
-
-@media (min-width: 992px) {
+  li.list-group-item,
   .container-contact {
     width: 50%;
   }
 }
 
-@media (min-width: 1200px) {
+@include media-breakpoint-up(lg) {
+  .container-contact {
+    width: 50%;
+  }
+}
+
+@include media-breakpoint-up(xl) {
   .list-group-horizontal,
   .portfolio-cards {
     max-width: 1350px;

@@ -1,3 +1,13 @@
 $font-family-sans-serif: 'Raleway', sans-serif;
 $font-family-display: 'Megrim', cursive;
 $font-family-subheading: 'Lato', sans-serif;
+
+// Global styles
+
+$enable-shadows: true;
+$enable-gradients: true;
+
+// Custom colors
+
+$primary: #375B5D; // dark green
+$light-transparent: rgba(248,249,250, 0.7);

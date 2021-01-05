@@ -30,25 +30,25 @@
 
     <!-- header -->
     <div id="home" class="header bg-transparent d-flex flex-column vh-100 mb-0 px-3">
-      <h1 class="text-center">Brenda Butler</h1>
-      <hr>
-      <p class="lead text-center fst-italic text-light">Creating modern, effective websites for your growing business.</p>
+      <h1 class="text-primary text-center">Brenda Butler</h1>
+      <hr class="border-top border-light border-2">
+      <h5 class="lead display-6 text-center fst-italic text-light">Creating modern, effective websites for your growing business.</h5>
     </div> <!-- /header -->
 
 
     <!-- about -->
     <div class="section section-about container-fluid w-100 min-vh-100 px-0 mb-4">
       <h2 class="header-section display-1 py-3 mb-4 text-center bg-dark text-light">About</h2>
-      <div id="about" class="container-about p-4 mx-4 mx-md-auto">
+      <div id="about" class="container-about p-4 mx-4 mx-md-auto rounded-3">
         <h4 class="text-center">Brenda Butler</h4>
         <hr class="my-4">
         <p>I am a front-end web developer with a passion for working with small businesses and non-profits to establish modern, easy-to-navigate websites. I strive to enhance visibility, accessibility, and facilitate relationships within the community. I would love to collaborate with you!</p>
         <div class="collapse" id="bio-more">
           <div class="bio-body">
-            <h5>Background</h5>
+            <h5 class="text-center text-decoration-underline">Background</h5>
             <p>In 2007, I graduated from Humboldt State University with a degree in Sociology and a minor in Spanish. For the next ten years I worked in the social services field, first working with foster youth and then working with the SNAP (formerly Food Stamps) program determining elibility. I loved the work I did, but I knew I wanted to take the leap to web development, even if I had to work my way all the way up. In 2018, I began focusing full-time on my education at Team Treehouse, while also taking community college classes to supplement my education. </p>
             <p>And then my life took some detours -- I became a full-time mom and also took part-time work as a Library Assistant. But in pursuit of making the most of this bananas year that has been 2020, I've completed my Front-End Web Development program through Team Treehouse, while relocating to Bend, OR this fall with my family. My web development education continues, but I am excited to start working with you!</p>
-            <h5>Interests</h5>
+            <h5 class="text-center text-decoration-underline">Interests</h5>
             <p>In my spare time you can find me doing other things: </p>
             <ul>
               <li><b>Crafting</b> - making lotions and potions and other crafty stuff for myself and friends and family </li>
@@ -76,33 +76,33 @@
           <h2 class="header-section display-1 py-3 mb-4 text-center bg-dark text-light">Work</h2>
         </div>
 
-        <div id="work" class="skills-list list-group list-group-horizontal flex-wrap justify-content-evenly position-relative m-5 pt-5">
-          <div class="background-label text-center">
+        <div id="work" class="skills-list list-group list-group-horizontal d-flex flex-wrap justify-content-evenly position-relative m-5 pt-5">
+          <div class="background-label display-3 text-center position-absolute start-0 end-0">
             skills
           </div>
-          <button class="list-group-item ga db ed">Javascript</button>
-          <button class="list-group-item ">Bootstrap</button>
-          <button class="list-group-item pg ">jQuery</button>
-          <button class="list-group-item ed">Web API</button>
-          <button class="list-group-item db ed">Sass</button>
-          <button class="list-group-item pg ga db ed">HTML & CSS</button>
+          <button class="list-group-item border-0 rounded-2 bg-dark text-light mb-3">Javascript</button>
+          <button class="list-group-item border-0 rounded-2 bg-dark text-light mb-3">Bootstrap</button>
+          <button class="list-group-item border-0 rounded-2 bg-dark text-light mb-3">jQuery</button>
+          <button class="list-group-item border-0 rounded-2 bg-dark text-light mb-3">Web API</button>
+          <button class="list-group-item border-0 rounded-2 bg-dark text-light mb-3">Sass</button>
+          <button class="list-group-item border-0 rounded-2 bg-dark text-light mb-3">HTML & CSS</button>
         </div>
 
         <!-- hidden portfolio descriptions -->
 
-        <div class="project-desc hidden">
+        <div class="project-desc visually-hidden">
           <p id="photo-gallery" class="project-about">This photo gallery features a grid format with the ability to filter using a live search bar. It also features a modal overlay using a jQuery plugin. </p>
           <p id="game-app" class="project-about">A simple game that generates a random phrase, utilizes an onscreen keyboard, and tallies incorrect guesses with the heart counter.</p>
           <p id="dashboard" class="project-about">An app dashboard utilizing various graph metrics, 'send message to user' functionality, and social media updates.</p>
           <p id="employee-directory" class="project-about">An employee directory page gathering data from an API, with modal functionality for a look at detailed employee data.</p>
         </div>
-        <div class="portfolio-container position-relative">
+        <div class="portfolio-container position-relative mx-auto py-5">
 
-          <div class="background-label text-center position-absolute">
+          <div class="background-label display-3 text-center position-absolute start-0 end-0">
             projects
           </div>
 
-          <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4 portfolio-cards mx-auto py-5">
+          <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4 portfolio-cards">
 
           <!-- insert JS for projects here -->
 
@@ -118,26 +118,26 @@
 
           <ul class="list-group mx-auto d-flex align-items-center">
 
-            <li class="list-group-item list-group-item-action text-center">
+            <li class="list-group-item list-group-item-action text-center text-dark mb-3 rounded-3">
               <h6 class="text-muted">2019-2020</h6>
               <h4 class="mb-1">Library Assistant</h4>
               <small class="text-muted">Newport Beach Public Library</small>
             </li>
 
-            <li class="list-group-item list-group-item-action text-center">
+            <li class="list-group-item list-group-item-action text-center mb-3 rounded-3">
               <h6 class="text-muted">2013-2018</h6>
               <h4 class="mb-1">Eligibility Supervisor/Worker</h4>
               <small class="text-muted">County of Orange</small>
               <small class="text-muted">Social Services Agency</small>
             </li>
 
-            <li class="list-group-item list-group-item-action text-center">
+            <li class="list-group-item list-group-item-action text-center mb-3 rounded-3">
               <h6 class="text-muted">2009-2013</h6>
               <h4 class="mb-1">Case Manager</h4>
               <small class="text-muted">New Alternatives</small>
             </li>
 
-            <li class="list-group-item list-group-item-action text-center">
+            <li class="list-group-item list-group-item-action text-center mb-3 rounded-3">
               <h6 class="text-muted">2007</h6>
               <h4 class="mb-1">Humboldt State University</h4>
               <small class="text-muted">Bachelor of Arts, Sociology</small>
@@ -150,7 +150,7 @@
       <!-- contact -->
       <div class="section section-contact container-fluid w-100 min-vh-100 px-0">
         <h2 class="header-section display-1 py-3 mb-4 text-center bg-dark text-light">Contact</h2>
-        <div id="contact" class="container-contact p-4 mx-4 mx-md-auto">
+        <div id="contact" class="container-contact p-4 mx-4 mx-md-auto rounded-3">
           <h4 class="text-center">Let's collaborate!</h4>
           <hr class="my-4">
 
