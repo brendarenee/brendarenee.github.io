@@ -1,5 +1,6 @@
 // Custom Files
 @import "utilities/variables";
+@import "utilities/mixins";
 
 // Required
 @import "../bootstrap-5.0.0-beta1/scss/bootstrap";
@@ -17,9 +18,7 @@
 @import "../bootstrap-5.0.0-beta1/scss/grid";
 @import "../bootstrap-5.0.0-beta1/scss/list-group";
 
-// Map Updates
 
-// map.set($spacers, "6", ($spacer * 10));
 
 /* General Formatting */
 
@@ -27,153 +26,128 @@ body {
   background: url('../images/forest-fog.jpg') no-repeat center center fixed;
 }
 
+.section-title {
+  @include absolute-position (56px, $spacing: null);
+  font-family: $font-family-display;
+}
+
+.section {
+  @include set-hw ($max-h: fit-content);
+}
+
+
+/* Header Section Styles*/
+
+.section-header {
+  padding-top: 15%;
+}
+
 h1 {
   font-family: $font-family-display;
   font-size: 7rem;
 }
 
-.header-section {
-  top: 56px;
-}
-
-.section {
-  max-height: fit-content;
-}
-
-h2.header-section {
-  font-family: $font-family-display;
-}
-
-/* Header */
-
-div.header {
-  padding-top: 15%;
-  background: linear-gradient(rgb(160, 185, 165), transparent 90%);
-}
-
-.header h5 {
+.lead {
   font-family: $font-family-subheading;
-  text-shadow: 1px 1px 3px $dark;
-
+  @include add-shadow (text, 3px);
 }
 
-
-/* About Section Styles */
+/*** About Section Styles ***/
 
 .container-about {
-  background-color: $light-transparent;
+  @extend %transparent-bg;
 }
 
 
-/* Portfolio Section Styles */
+/*** Portfolio Section Styles ***/
+
+  // skills list styles
+  .background-label {
+    @include absolute-position (-15px, 13px) {
+      z-index: -1;
+      overflow: hidden;
+    }
+  }
+
+  .list-group-item {
+    @include add-shadow (box, 4px);
+  }
 
 
-.section-work {
-  background: linear-gradient(rgba(114, 160, 193, 0.85), transparent 90%);
-}
+  // flip card styles
+  .flip-card {
+    perspective: 1000px;
+  }
 
-.background-label {;
-  top: -15px;
-  z-index: -1;
-  overflow: hidden;
-  letter-spacing: 13px;
-}
+  .flip-card-inner {
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
 
-.list-group-item {
-  box-shadow: 1px 1px 4px $dark;
-}
+  .card:hover .flip-card-inner,
+  .flip-card-back {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-front, .flip-card-back {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    @include add-shadow (box, 5px);
+  }
+
+  .card-title {
+    @include add-shadow (text, 2px);
+  }
 
 
-/* FLIP CARD */
-.flip-card {
-  perspective: 1000px;
-}
-
-.flip-card-inner {
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-}
-
-.card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-.flip-card-front, .flip-card-back {
-  border-radius: 15px;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-.card-title {
-  text-shadow: 1px 1px 3px $dark;
-}
-
-.flip-card-back {
-  transform: rotateY(180deg);
-}
-
-/* Resume */
-
-.section-resume {
-  background: linear-gradient(rgb(245,215,212), transparent 90%);
-}
+/*** Resume Section Styles ***/
 
 li.list-group-item {
   background-color: $light-transparent;
-  width: 75%;
+  @include set-hw ($width: 75%);
 }
 
-/* Contact Section */
 
-.section-contact {
-  background: linear-gradient(rgb(52, 58, 64), transparent 90%);
-}
+/*** Contact Section Styles ***/
 
 .container-contact {
-  background-color: $light-transparent;
+  @extend %transparent-bg;
 }
 
 .custom-icon {
-  width: 50px;
-  height: 50px;
+  @include set-hw ($height: 50px, $width: 50px);
 }
+
+
 /* MEDIA QUERIES */
 
 @include media-breakpoint-up(md) {
 
-  div.header {
+  .section-header {
     padding-top: 20%;
   }
 
   .background-label {
-    top: -40px;
-    letter-spacing: 50px;
+    @include absolute-position (-40px, 50px);
   }
 
   .container-about {
-    width: 80%;
+    @include set-hw ($width: 80%);
   }
 
   .portfolio-container > .background-label {
-    top: -45px;
-    letter-spacing: 30px;
+    @include absolute-position (-45px, 30px);
   }
 
   li.list-group-item,
   .container-contact {
-    width: 50%;
-  }
-}
-
-@include media-breakpoint-up(lg) {
-  .container-contact {
-    width: 50%;
+    @include set-hw ($width: 50%, $max-w: 650px);
   }
 }
 
 @include media-breakpoint-up(xl) {
   .list-group-horizontal,
   .portfolio-cards {
-    max-width: 1350px;
+    @include set-hw ($max-w: 1350px);
   }
 }

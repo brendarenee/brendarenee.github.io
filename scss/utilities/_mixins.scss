@@ -1,0 +1,33 @@
+
+// Set background transparent colors
+@each $section, $bg-color in $section-bg{
+  .section-#{$section} {
+    background: linear-gradient($bg-color, transparent 90%);
+  }
+}
+
+@mixin add-shadow ($type, $blur) {
+  #{$type}-shadow: 1px 1px $blur $dark;
+}
+
+@mixin absolute-position ($top, $spacing) {
+  top: $top;
+  letter-spacing: $spacing;
+  @content;
+}
+
+@mixin set-hw (
+  $height: null,
+  $width: null,
+  $max-h: null,
+  $max-w: null,
+) {
+  height: $height;
+  width: $width;
+  max-height: $max-h;
+  max-width: $max-w;
+
+}
+%transparent-bg {
+  background-color: $light-transparent;
+}

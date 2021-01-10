@@ -1,4 +1,28 @@
 @charset "UTF-8";
+.section-header {
+  background: linear-gradient(#a0b9a5, transparent 90%);
+}
+
+.section-about {
+  background: linear-gradient(rgba(220, 220, 133, 0.75), transparent 90%);
+}
+
+.section-work {
+  background: linear-gradient(rgba(114, 160, 193, 0.85), transparent 90%);
+}
+
+.section-resume {
+  background: linear-gradient(rgba(181, 103, 39, 0.6), transparent 90%);
+}
+
+.section-contact {
+  background: linear-gradient(#343a40, transparent 90%);
+}
+
+.container-contact, .container-about {
+  background-color: rgba(248, 249, 250, 0.7);
+}
+
 /*!
  * Bootstrap v5.0.0-beta1 (https://getbootstrap.com/)
  * Copyright 2011-2020 The Bootstrap Authors
@@ -13097,56 +13121,43 @@ body {
   background: url("../images/forest-fog.jpg") no-repeat center center fixed;
 }
 
-h1, .h1 {
-  font-family: "Megrim", cursive;
-  font-size: 7rem;
-}
-
-.header-section {
+.section-title {
   top: 56px;
+  font-family: "Megrim", cursive;
 }
 
 .section {
   max-height: fit-content;
 }
 
-h2.header-section, .header-section.h2 {
-  font-family: "Megrim", cursive;
-}
-
-/* Header */
-div.header {
+/* Header Section Styles*/
+.section-header {
   padding-top: 15%;
-  background: linear-gradient(#a0b9a5, transparent 90%);
 }
 
-.header h5, .header .h5 {
+h1, .h1 {
+  font-family: "Megrim", cursive;
+  font-size: 7rem;
+}
+
+.lead {
   font-family: "Lato", sans-serif;
   text-shadow: 1px 1px 3px #212529;
 }
 
-/* About Section Styles */
-.container-about {
-  background-color: rgba(248, 249, 250, 0.7);
-}
-
-/* Portfolio Section Styles */
-.section-work {
-  background: linear-gradient(rgba(114, 160, 193, 0.85), transparent 90%);
-}
-
+/*** About Section Styles ***/
+/*** Portfolio Section Styles ***/
 .background-label {
   top: -15px;
+  letter-spacing: 13px;
   z-index: -1;
   overflow: hidden;
-  letter-spacing: 13px;
 }
 
 .list-group-item {
   box-shadow: 1px 1px 4px #212529;
 }
 
-/* FLIP CARD */
 .flip-card {
   perspective: 1000px;
 }
@@ -13156,51 +13167,36 @@ div.header {
   transform-style: preserve-3d;
 }
 
-.card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-.flip-card-front, .flip-card-back {
-  border-radius: 15px;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-.card-title {
-  text-shadow: 1px 1px 3px #212529;
-}
-
+.card:hover .flip-card-inner,
 .flip-card-back {
   transform: rotateY(180deg);
 }
 
-/* Resume */
-.section-resume {
-  background: linear-gradient(#f5d7d4, transparent 90%);
+.flip-card-front, .flip-card-back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  box-shadow: 1px 1px 5px #212529;
 }
 
+.card-title {
+  text-shadow: 1px 1px 2px #212529;
+}
+
+/*** Resume Section Styles ***/
 li.list-group-item {
   background-color: rgba(248, 249, 250, 0.7);
   width: 75%;
 }
 
-/* Contact Section */
-.section-contact {
-  background: linear-gradient(#343a40, transparent 90%);
-}
-
-.container-contact {
-  background-color: rgba(248, 249, 250, 0.7);
-}
-
+/*** Contact Section Styles ***/
 .custom-icon {
-  width: 50px;
   height: 50px;
+  width: 50px;
 }
 
 /* MEDIA QUERIES */
 @media (min-width: 768px) {
-  div.header {
+  .section-header {
     padding-top: 20%;
   }
 
@@ -13221,11 +13217,7 @@ li.list-group-item {
   li.list-group-item,
 .container-contact {
     width: 50%;
-  }
-}
-@media (min-width: 992px) {
-  .container-contact {
-    width: 50%;
+    max-width: 650px;
   }
 }
 @media (min-width: 1200px) {
