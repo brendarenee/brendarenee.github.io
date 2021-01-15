@@ -13140,7 +13140,7 @@ progress {
 
 h1, .h1 {
   font-family: "Megrim", cursive;
-  font-size: 7rem;
+  font-size: 6rem;
 }
 
 .lead {
@@ -13216,6 +13216,11 @@ li.list-group-item {
 }
 
 /* MEDIA QUERIES */
+@media (min-width: 576px) {
+  h1, .h1 {
+    font-size: 7rem;
+  }
+}
 @media (min-width: 768px) {
   body {
     background: url("../images/forest-fog.jpg") no-repeat center center fixed;
