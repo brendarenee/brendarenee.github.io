@@ -31,3 +31,10 @@
 %transparent-bg {
   background-color: $light-transparent;
 }
+
+%link-style {
+  transition: background-color 0.5s ease;
+  &:hover {
+    background-color: $primary;
+  }
+}

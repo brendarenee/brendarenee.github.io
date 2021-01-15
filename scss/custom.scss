@@ -22,10 +22,6 @@
 
 /* General Formatting */
 
-body {
-  background: url('../images/forest-fog.jpg') no-repeat center center fixed;
-}
-
 .section-title {
   @include absolute-position (56px, $spacing: null);
   font-family: $font-family-display;
@@ -58,6 +54,11 @@ h1 {
   @extend %transparent-bg;
 }
 
+.buttons-about a {
+  background-color: $dark-primary;
+  @extend %link-style;
+}
+
 
 /*** Portfolio Section Styles ***/
 
@@ -73,8 +74,20 @@ h1 {
     @include add-shadow (box, 4px);
   }
 
+  .skills-highlight {
+    transition: background-color 0.5s ease-in-out;
+    background-color: $primary;
+  }
+
+  .bg-dark {
+    transition: background-color 0.5s ease;
+  }
+
+
+
 
   // flip card styles
+
   .flip-card {
     perspective: 1000px;
   }
@@ -116,12 +129,23 @@ li.list-group-item {
 
 .custom-icon {
   @include set-hw ($height: 50px, $width: 50px);
+  transition: all 0.5s ease-in-out;
+
+  circle {
+    transition: all 0.5s ease-in-out;
+    fill: $svg-primary;
+  }
 }
+
+
 
 
 /* MEDIA QUERIES */
 
 @include media-breakpoint-up(md) {
+  body {
+    background: url('../images/forest-fog.jpg') no-repeat center center fixed;
+  }
 
   .section-header {
     padding-top: 20%;
