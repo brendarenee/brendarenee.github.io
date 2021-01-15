@@ -9,7 +9,8 @@ const projectLinks = [
   "https://brendarenee.github.io/techdegree-project-5/",
   "https://brendarenee.github.io/techdegree-project-6/",
   "https://brendarenee.github.io/techdegree-project-7/",
-  "https://brendarenee.github.io/techdegree-project-8/"
+  "https://brendarenee.github.io/techdegree-project-8/",
+  "https://brendarenee.github.io/techdegree-project-4/"
 ]
 
 // Function generating html for each project tile link
