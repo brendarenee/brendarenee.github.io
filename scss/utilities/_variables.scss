@@ -1,25 +1,32 @@
 
 // Colors
 
+  // reset bootstrap primary color
+  $primary: rgb(56, 94, 70); // dark green
+
+  // other colors
+  $dark-primary: rgb(33, 37, 41); //dark gray
+  $svg-primary: rgb(160, 185, 165); // light green
+  $svg-darken: rgb(105, 122, 108);
+  $light-transparent: rgba(248,249,250, 0.7);
+
+  // background gradient colors
+  $section-bg:
+  'header' rgb(160, 185, 165), // green
+  'about' rgba(220, 220, 133, 0.75), // yellow
+  'work' rgba(114, 160, 193, 0.85), // blue
+  'resume' rgba(181, 103, 39, 0.6), // cider orange
+  'contact' $dark-primary; // dark gray
+
+
+// Custom Fonts
+
 $font-family-sans-serif: 'Raleway', sans-serif;
 $font-family-display: 'Megrim', cursive;
 $font-family-subheading: 'Lato', sans-serif;
 
-$section-bg:
-'header' rgb(160, 185, 165), // green
-'about' rgba(220, 220, 133, 0.75), // yellow
-'work' rgba(114, 160, 193, 0.85), // blue
-'resume' rgba(181, 103, 39, 0.6), // cider orange
-'contact' rgb(52, 58, 64); // gray
 
 // Global styles
 
 $enable-shadows: true;
 $enable-gradients: true;
-
-// Custom colors
-
-// reset bootstrap primary color
-$primary: #375B5D; // dark green
-
-$light-transparent: rgba(248,249,250, 0.7);
